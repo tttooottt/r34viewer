@@ -12,7 +12,6 @@ async function searchVidsAll(e) {
     let vidsAll = [];
     let pagesCount = 0;
     while (true) {
-        console.log(pagesCount);
         try {
             const vids = await searchVids(e, 1000, pagesCount++);
             vidsAll = vidsAll.concat(vids);
@@ -105,7 +104,6 @@ async function start() {
                 currentIndex = +e.target.value - 1;
                 indexInput.value = "";
                 indexInput.placeholder = currentIndex + 1;
-                console.log(e.target.value);
             }
             return;
         }
