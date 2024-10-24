@@ -69,3 +69,26 @@ button:focus, input:focus, video:focus{
     color:rgb(207, 207, 207);
     background: rgb(36, 36, 36);
 }
+
+.index-size {
+    text-align: center;
+    padding: 0.5em;
+    font-family: sans-serif;
+    color: #C5AFA4;
+    display: inline-flex;
+    background-color: #2F2F2F;
+}
+
+.index-input {
+    background-color: #2F2F2F;
+    width: 100%;
+    max-width: 4em;
+    text-align: end;
+    border: none;
+    font-size: 1em;
+    color: #C5AFA4;
+}
+
+.vids-size {
+    margin-top: 1px;
+}
