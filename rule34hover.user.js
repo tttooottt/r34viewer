@@ -27,7 +27,7 @@ document.querySelectorAll('.thumb img').forEach(t => {
         prev.style.zIndex = 99;
         document.body.appendChild(prev);
         thumb.target.addEventListener("mouseleave", (e) => {
-            prev.remove(); console.log(e);
+            prev.remove();
         }, { once: "true" });
         const res = await fetch("https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&json=1&id=" + id);
         const vi = await res.json();
