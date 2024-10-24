@@ -1,0 +1,71 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    overflow-y:hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+video {
+    object-fit: contain;
+    height: 100%;
+    max-width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F0F0F;
+}
+
+main {
+    height: 100vh;
+}
+
+.topnav {
+    font-size: 2rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    opacity: 0;
+}
+
+.topnav:hover, .topnav:has(.searchbar:focus) {
+    opacity: 1;
+}
+
+.topnav-button {
+    margin-left: auto;
+    background-color: #2F2F2F;
+    color: #C5AFA4;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.searchbar {
+    background-color: #2F2F2F;
+    width: 100%;
+    border: none;
+    font-size: 1em;
+    padding: 0.5em;
+    color: #C5AFA4;
+}
+
+button:focus, input:focus, video:focus{
+    outline: none;
+}
+
+::selection {
+    color:rgb(207, 207, 207);
+    background: rgb(36, 36, 36);
+}
