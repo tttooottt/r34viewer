@@ -34,6 +34,7 @@ async function start() {
                     vids = await searchVids(e.target.value);
                     setVid(vids[0]);
                     searchbar.style.outline = "";
+                    currentIndex = 0;
                 }
                 catch {
                     searchbar.style.outline = "2px solid red";
