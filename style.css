@@ -82,7 +82,7 @@ button:focus, input:focus, video:focus{
 .index-input {
     background-color: #2F2F2F;
     width: 100%;
-    max-width: 4em;
+    max-width: 6em;
     text-align: end;
     border: none;
     font-size: 1em;
