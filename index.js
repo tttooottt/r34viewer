@@ -107,6 +107,7 @@ async function start() {
                 currentIndex = +e.target.value - 1;
                 indexInput.value = "";
                 indexInput.placeholder = currentIndex + 1;
+                videoPlayer.focus();
             }
             return;
         }
