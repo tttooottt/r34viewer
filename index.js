@@ -38,9 +38,10 @@ async function start() {
     const searchbar = document.querySelector(".searchbar");
     const indexInput = document.querySelector(".index-input");
     const vidsSize = document.querySelector(".vids-size");
+    const videoPlayer = document.querySelector("video");
     let vids = [];
     let currentIndex = 0;
-    ['seeking', 'play', 'pause', 'volumechange', 'fullscreenchange'].forEach((event) => {
+    ['seeking', 'play', 'pause', 'fullscreenchange'].forEach((event) => {
         document.querySelector('video').addEventListener(event, (e) => {
             if (document.activeElement.nodeName !== "VIDEO") {
                 return;
@@ -50,7 +51,8 @@ async function start() {
     });
     document.addEventListener("keydown", async (e) => {
         if (e.key === "Escape") {
-            e.target.blur();
+            // e.target.blur();
+            videoPlayer.focus();
         }
         if (e.target.nodeName === "INPUT") {
             if (e.code !== "Enter") {
@@ -70,6 +72,7 @@ async function start() {
                 indexInput.value = "";
                 indexInput.placeholder = currentIndex + 1;
                 vidsSize.textContent = "/" + vids.length;
+                videoPlayer.focus();
 
                 (async function () {
                     let pagesCount = 0;
