@@ -48,8 +48,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 0.5em;
-    padding-left: 0.5em;
+    /* padding-right: 0.5em;
+    padding-left: 0.5em; */
 }
 
 .searchbar {
@@ -91,4 +91,21 @@ button:focus, input:focus, video:focus{
 
 .vids-size {
     margin-top: 1px;
+}
+
+#source {
+    padding-right: 0.5em;
+}
+
+#hostname {
+    padding-left: 0.5em;
+}
+
+#hostname img {
+    height: 1em;
+    cursor: pointer;
+}
+
+.topnav-button svg {
+    cursor: pointer;
 }
