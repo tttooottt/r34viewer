@@ -46,7 +46,7 @@ function* cycleHost() {
                 source: "https://rule34.xxx/index.php?page=post&s=view&id=" + video.id
             }
         }},
-        { name: "corsproxy.io/?https://realbooru.com", icon: "./assets/realbooru.png", mapper: (video) => {
+        { name: "realbooru.com", icon: "./assets/realbooru.png", mapper: (video) => {
             return {
                 url: `https://realbooru.com//images/${video.directory}/${video.image}`,
                 source: "https://realbooru.com/index.php?page=post&s=view&id=" + video.id
