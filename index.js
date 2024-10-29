@@ -130,7 +130,7 @@ async function start() {
                     const localTags = e.target.value;
                     const localCurrentHost = {...currentHost};
                     const localSearchId = searchId;
-                    let pagesCount = 0;
+                    let pagesCount = 1;
                     while (true) {
                         try {
                             const pageVids = await localCurrentHost.search(localTags, 1000, pagesCount++);
