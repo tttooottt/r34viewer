@@ -54,12 +54,12 @@ function* cycleHost() {
         }}
     ]
     
-    for (h of hosts) {
+    for (const h of hosts) {
         h.search = hostedSearhVids(h);
     }
 
     while (true) {
-        for (h of hosts) {
+        for (const h of hosts) {
             yield h;
         }
     }
