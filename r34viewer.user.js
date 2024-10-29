@@ -337,7 +337,14 @@ async function start() {
             e.preventDefault();
             searchbar.focus();
         }
-
+        if (e.code === "Semicolon") {
+            e.preventDefault();
+            indexInput.focus();
+        }
+        if (e.code === "KeyL") {
+            e.preventDefault();
+            currentHost = nextHost();
+        }
         if (e.code === "Comma") {
             if (0 < currentIndex && currentIndex < vids.length) {
                 setVid(vids[--currentIndex]);
