@@ -175,6 +175,14 @@ async function start() {
             e.preventDefault();
             currentHost = nextHost();
         }
+        if (e.code === "KeyF") {
+            e.preventDefault();
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
         if (e.code === "Comma") {
             if (0 < currentIndex && currentIndex < vids.length) {
                 setVid(vids[--currentIndex]);
