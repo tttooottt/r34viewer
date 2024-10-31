@@ -1,7 +1,7 @@
 body,html {
     margin: 0;
     padding: 0;
-    overflow-y:hidden;
+    height: 100vh;
 }
 
 * {
@@ -22,7 +22,8 @@ body {
 }
 
 main {
-    height: 100vh;
+    overflow-y:hidden;
+    height: 100%;
 }
 
 .topnav {

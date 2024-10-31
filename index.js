@@ -104,7 +104,7 @@ async function start() {
             videoPlayer.focus();
         }
         if (e.target.nodeName === "INPUT") {
-            if (e.code !== "Enter") {
+            if (e.key !== "Enter") {
                 return;
             }
             if (e.target === searchbar) {
