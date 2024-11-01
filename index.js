@@ -98,6 +98,24 @@ async function start() {
         currentHost = nextHost();
     });
 
+    const nextVideo = () => {
+        if (0 <= currentIndex && currentIndex < vids.length - 1) {
+            setVid(vids[++currentIndex]);
+            indexInput.value = "";
+            indexInput.placeholder = currentIndex + 1;
+        }
+    }
+    const prevVideo = () => {
+        if (0 < currentIndex && currentIndex < vids.length) {
+            setVid(vids[--currentIndex]);
+            indexInput.value = "";
+            indexInput.placeholder = currentIndex + 1;
+        }
+    }
+
+    document.querySelector(".side-button_right").addEventListener("click", nextVideo);
+    document.querySelector(".side-button_left").addEventListener("click", prevVideo);
+
     document.addEventListener("keydown", async (e) => {
         if (e.key === "Escape") {
             // e.target.blur();
@@ -184,18 +202,10 @@ async function start() {
             }
         }
         if (e.code === "Comma") {
-            if (0 < currentIndex && currentIndex < vids.length) {
-                setVid(vids[--currentIndex]);
-                indexInput.value = "";
-                indexInput.placeholder = currentIndex + 1;
-            }
+            prevVideo();
         }
         if (e.code === "Period") {
-            if (0 <= currentIndex && currentIndex < vids.length - 1) {
-                setVid(vids[++currentIndex]);
-                indexInput.value = "";
-                indexInput.placeholder = currentIndex + 1;
-            }
+            nextVideo();
         }
     });
 }

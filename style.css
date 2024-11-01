@@ -1,3 +1,8 @@
+:root {
+    --interface-fg: #C5AFA4;
+    --interface-bg: #2F2F2F;
+}
+
 body,html {
     margin: 0;
     padding: 0;
@@ -37,14 +42,33 @@ main {
     opacity: 0;
 }
 
-.topnav:hover, .topnav:has(.searchbar:focus, .index-input:focus) {
+.side-button_right {
+    right: 0;
+}
+
+.side-button_left {
+    left: 0;
+}
+
+.side-button {
+    position: absolute;
+    top: 45%;
+    background-color: var(--interface-bg);
+    color: var(--interface-fg);
+    padding: 1.5em;
+    display: flex;
+    opacity: 0;
+    z-index: 99;
+}
+
+.topnav:hover, .topnav:has(.searchbar:focus, .index-input:focus), .side-button:hover {
     opacity: 1;
 }
 
 .topnav-button {
     margin-left: auto;
-    background-color: #2F2F2F;
-    color: #C5AFA4;
+    background-color: var(--interface-bg);
+    color: var(--interface-fg);
     border: 0;
     display: flex;
     align-items: center;
@@ -54,12 +78,12 @@ main {
 }
 
 .searchbar {
-    background-color: #2F2F2F;
+    background-color: var(--interface-bg);
     width: 100%;
     border: none;
     font-size: 1em;
     padding: 0.5em;
-    color: #C5AFA4;
+    color: var(--interface-fg);
 }
 
 button:focus, input:focus, video:focus{
@@ -75,19 +99,19 @@ button:focus, input:focus, video:focus{
     text-align: center;
     padding: 0.5em;
     font-family: sans-serif;
-    color: #C5AFA4;
+    color: var(--interface-fg);
     display: inline-flex;
-    background-color: #2F2F2F;
+    background-color: var(--interface-bg);
 }
 
 .index-input {
-    background-color: #2F2F2F;
+    background-color: var(--interface-bg);
     width: 100%;
     max-width: 6em;
     text-align: end;
     border: none;
     font-size: 1em;
-    color: #C5AFA4;
+    color: var(--interface-fg);
 }
 
 .vids-size {
@@ -107,6 +131,6 @@ button:focus, input:focus, video:focus{
     cursor: pointer;
 }
 
-.topnav-button svg {
+.topnav-button svg, .side-button {
     cursor: pointer;
 }
