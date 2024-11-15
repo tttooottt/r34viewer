@@ -51,6 +51,12 @@ function* cycleHost() {
                 url: `https://realbooru.com//images/${video.directory}/${video.image}`,
                 source: "https://realbooru.com/index.php?page=post&s=view&id=" + video.id
             }
+        }},
+        { name: "gelbooru.com", icon: "./assets/gelbooru.png", mapper: (video) => {
+            return {
+                url: video.file_url,
+                source: "https://gelbooru.com/index.php?page=post&s=view&id=" + video.id
+            }
         }}
     ]
     
