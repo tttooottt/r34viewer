@@ -5,7 +5,8 @@ async function searchVids(host, e, limit, pid) {
         console.log(res.status);
         return;
     }
-    return res.json().then(v => v.map(host.mapper));
+    return res.json().then(v => v.post ? v.post : v)
+        .then(v => v.map(host.mapper));
 }
 
 async function searchVidsAll(host, e) {
