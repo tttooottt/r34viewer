@@ -5,6 +5,7 @@
 // @author      tttooottt
 // @description r34viewer on realbooru(CORS fix)
 // @match       *://*.realbooru.com/r34viewer
+// @match       *://*.gelbooru.com/r34viewer
 // @grant       GM_addStyle
 // @license     MIT
 // ==/UserScript==
@@ -220,6 +221,12 @@ function* cycleHost() {
             return {
                 url: `https://realbooru.com//images/${video.directory}/${video.image}`,
                 source: "https://realbooru.com/index.php?page=post&s=view&id=" + video.id
+            }
+        }},
+        { name: "gelbooru.com", icon: "https://raw.githubusercontent.com/tttooottt/r34viewer/refs/heads/main/assets/gelbooru.png", mapper: (video) => {
+            return {
+                url: video.file_url,
+                source: "https://gelbooru.com/index.php?page=post&s=view&id=" + video.id
             }
         }}
     ]
